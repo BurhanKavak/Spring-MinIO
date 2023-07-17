@@ -24,7 +24,7 @@
 ## 🎯 **Buckettan veri indirme (download)**
 ![](/images/1.png)
 
-## 🎯 **Bucket bu şekildedir**
+## 🎯 **Bucket görünümü**
 ![](/images/3.png)
 
 ## :pushpin: MinIO bağımlılığı
