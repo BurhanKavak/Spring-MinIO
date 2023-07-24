@@ -44,6 +44,19 @@ public class FileStoreController {
         }
     }
 
+    @GetMapping("/download/pdf/{fileName}")
+    public ResponseEntity<Resource> downloadPdf(@PathVariable("fileName") String fileName) {
+        Resource resource = fileStoreService.downloadImage(fileName);
+        if (resource != null) {
+            return ResponseEntity.ok()
+                    .contentType(MediaType.IMAGE_JPEG)
+                    .contentType(MediaType.APPLICATION_PDF)
+                    .body(resource);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 
 
     @PostMapping("/upload/video")
