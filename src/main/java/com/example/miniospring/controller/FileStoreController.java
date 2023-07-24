@@ -49,7 +49,6 @@ public class FileStoreController {
         Resource resource = fileStoreService.downloadImage(fileName);
         if (resource != null) {
             return ResponseEntity.ok()
-                    .contentType(MediaType.IMAGE_JPEG)
                     .contentType(MediaType.APPLICATION_PDF)
                     .body(resource);
         } else {
